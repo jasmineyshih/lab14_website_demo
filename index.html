@@ -66,8 +66,10 @@
                     width=100%>
             </div>
         </div>
+    </div>
 
-        <div class="row charts">
+    <div class="container">
+        <div class="row">
             <div class="col-4">
                 <h4>Example 1: Single Plot Cell with Tooltip</h4>
                 <p>This is the symbol map of U.S. powerplants taken from Lab 10 (with some edits to make it a named cell and add tooltips). The tooltip works in the embedded viz.</p>
@@ -79,16 +81,18 @@
                 <div id="observablehq-mapSymbols-270917df"></div>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
                 <script type="module">
-                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project.js?v=4";
-                new Runtime().module(define, name => {
-                if (name === "mapSymbols") return new Inspector(document.querySelector("#observablehq-mapSymbols-270917df"));
-                });
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project.js?v=4";
+                    new Runtime().module(define, name => {
+                    if (name === "mapSymbols") return new Inspector(document.querySelector("#observablehq-mapSymbols-270917df"));
+                    });
                 </script>
             </div>
         </div>
+    </div>
 
-        <div class="row charts">
+    <div class="container">
+        <div class="row">
             <div class="col-4">
                 <h4>Example 2: Multiple Plot Cells with Interactive UI</h4>
                 <p>This is the density map of U.S. powerplants with interactive checkboxes taken from Lab 10 Solutions.</p>
@@ -101,17 +105,19 @@
                 <div id="observablehq-mapDensityInteractive-6eab1371"></div>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
                 <script type="module">
-                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project.js?v=4";
-                new Runtime().module(define, name => {
-                if (name === "viewof selectSource") return new Inspector(document.querySelector("#observablehq-viewof-selectSource-6eab1371"));
-                if (name === "mapDensityInteractive") return new Inspector(document.querySelector("#observablehq-mapDensityInteractive-6eab1371"));
-                });
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project.js?v=4";
+                    new Runtime().module(define, name => {
+                    if (name === "viewof selectSource") return new Inspector(document.querySelector("#observablehq-viewof-selectSource-6eab1371"));
+                    if (name === "mapDensityInteractive") return new Inspector(document.querySelector("#observablehq-mapDensityInteractive-6eab1371"));
+                    });
                 </script>
             </div>
         </div>
-
-        <div class="row charts">
+    </div>
+    
+    <div class="container">
+        <div class="row">
             <div class="col-4">
                 <h4>Example 3: Adding Interactivity to the Website</h4>
                 <p>We can also implement interactive features directly in the website's HTML file. For example, we can add a button for toggling between two views of the same data.</p>
@@ -125,11 +131,11 @@
                     <div id="observablehq-mapDots-fdb863b4"></div>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
                     <script type="module">
-                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                    import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project.js?v=4";
-                    new Runtime().module(define, name => {
-                    if (name === "mapDots") return new Inspector(document.querySelector("#observablehq-mapDots-fdb863b4"));
-                    });
+                        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                        import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project.js?v=4";
+                        new Runtime().module(define, name => {
+                        if (name === "mapDots") return new Inspector(document.querySelector("#observablehq-mapDots-fdb863b4"));
+                        });
                     </script>
                 </div>
 
@@ -137,11 +143,11 @@
                     <div id="observablehq-mapDensity-5e24e1f0"></div>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
                     <script type="module">
-                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                    import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project.js?v=4";
-                    new Runtime().module(define, name => {
-                    if (name === "mapDensity") return new Inspector(document.querySelector("#observablehq-mapDensity-5e24e1f0"));
-                    });
+                        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                        import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project.js?v=4";
+                        new Runtime().module(define, name => {
+                        if (name === "mapDensity") return new Inspector(document.querySelector("#observablehq-mapDensity-5e24e1f0"));
+                        });
                     </script>
                 </div>
 
@@ -151,28 +157,54 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col">
+                <h4>Example 4: D3 Cell with Interactivity and Animation</h4>
+                <p>D3 cells can be embedded in the same way. Any interactivity and animation the cell supports will work in the embedded version as well. Here we let the svg take up the whole row and center it by applying the Bootstrap pre-defined `.text-center` class to the column div.</p>
+            </div>
+        </div>
+
+        <div class="row chart">
+            <div class="col text-center">
+                <div id="observablehq-nodesInteractive-bdf390a3"></div>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+                <script type="module">
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@i247-2025/lab-14-making-website-for-final-project@575.js?v=4";
+                    new Runtime().module(define, name => {
+                    if (name === "nodesInteractive") return new Inspector(document.querySelector("#observablehq-nodesInteractive-bdf390a3"));
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
                 <h3>Part 2: Embedding Tableau Dashboards</h3>
                 <ol>
                     <li>To embed a dashboard in your webpage, the workbook needs to be uploaded to and hosted on Tableau Public</li>
                     <li>All the interactivity that the original dashboard supports will work in the embedded view as well</li>
                 </ol>
-                <p>Here we embed our Lab 6 workbook as an example.</p>
+                <p>Here we embed a modified version of our Lab 6 workbook as an example.</p>
             </div>
-            <div class="row charts">
-                <div class="col">
-                    <tableau-viz id="tableauViz"       
-                        src='https://public.tableau.com/views/Lab6_17457968977910/Lab6?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
-                    </tableau-viz>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <tableau-viz id="tableauViz"       
+                    src='https://public.tableau.com/views/Lab14DemoDashboard/Lab6?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
+                </tableau-viz>
             </div>
         </div>
     </div>
+    <!--Import Tableau Embedding API-->
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
 
-    <div class="container text-center">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-5">
-                <h4>This concludes our project website demo.</h4>
+                <h4 class="text-center">Conclusion</h4>
+                <p>We can center a block of text of a certain width by setting the column's width with `.col-X` and then applying the `.justify-content-center` class to its parent row div. Here the width is 5/12 of the row width (`.col-5`). The "Conclusion" header is further centered using the `.text-center` class.</p>
             </div>
         </div>
     </div>
@@ -187,8 +219,5 @@
             }
         }
     </script>
-
-    <!--Import Tableau Embedding API-->
-    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
 </body>
 </html>
